@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "npm-pub:angular-table": "npm version prerelease --preid=v.17 && npm publish dist/angular-table --access public --tag v.17"
   },
   "private": true,
   "dependencies": {
