@@ -8,5 +8,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "scripts": {
+    "git-config": "git config --global url.\"https://\".insteadOf ssh://",
+    "npm-pub:angular-table": "npm publish ../../dist/angular-table --access public --tag a17"
+  },
   "sideEffects": false
 }

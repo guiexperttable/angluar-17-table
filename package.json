@@ -1,13 +1,14 @@
 {
   "name": "@guiexpert/angular-table",
-  "version": "17.0.1-v.17.0",
+  "version": "17.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "npm-pub:angular-table": "npm version prerelease --preid=v.17 && npm publish dist/angular-table --access public --tag v.17"
+    "git-config": "git config --global url.\"https://\".insteadOf ssh://",
+    "npm-pub:angular-table": "npm publish dist/angular-table --access public --tag v.17"
   },
   "private": true,
   "dependencies": {
