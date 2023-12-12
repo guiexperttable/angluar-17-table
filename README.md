@@ -1,27 +1,105 @@
-# Angular17Table
+# @guiexpert/angular-table
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+This is the angular component of the GuiExpert Table Project.
 
-## Development server
+## Become a master at creating web applications with large tables
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is the UI-agnostic table component for your next web app. 😊
 
-## Code scaffolding
+<img src="https://raw.githubusercontent.com/guiexperttable/ge-table/main/apps/table-website/src/assets/screens/heatmap.png" width="50%">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Features
+- Handle large datasets easily
+- Excellent performance for large tables by vertical and horizontal virtual scrolling
+- Fully-featured (advanced sorting and filtering)
+- Highly customizable orderData grid
+- Outstanding performance
+- No third-party dependencies
+- UI-agnostic
+- Column Interactions (resize, reorder)
+- Sorting Rows
+- Row, Column, and Range Selection
+- Single and Multi Selection
+- UI-agnostic
+- Row and Column Spanning
+- Fixed Columns (Left and Right)
+- Tree table (Hierarchical View)
+- Accessibility support: Keyboard Shortcuts
+- Custom Filtering
+- In-place Cell Editing
+- Userdefined Key and Mouse Events
+- Customizable Look & Feel (via CSS variables)
+- Row sorting
+- Column Reordering (Drag and Drop)
+- State Persistence (Row Sorting, Column Order, Selection)
+- Customizable Cell Contents via Renderer for Header, Body and Footer
+- Full control over the HTML structure and style
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Links
 
-## Running unit tests
+- [Demos](https://gui.expert/demos)
+- [Documentation](https://gui.expert/doc)
+- [API](https://gui.expert/api)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Get Started
 
-## Running end-to-end tests
+Add the following two NPM packages to your existing angular project (run this in your project root directory):
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install --save @guiexpert/table @guiexpert/angular-table
+```
 
-## Further help
+Import the (standalone) TableComponent in your angular module:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+@NgModule({
+    imports: [
+      CommonModule,
+      TableComponent, ...
+```
+
+Add guiexpert-table component to a template:
+
+```
+<guiexpert-table
+  [tableModel]="tableModel"
+  [tableOptions]="tableOptions"
+  class="table-div"
+></guiexpert-table>
+```
+
+
+Add two properties (tableModel and tableOptions) to the component:
+
+```
+import {
+  TableFactory,
+  TableModelIf,
+  TableOptions,
+  TableOptionsIf
+} from "@guiexpert/table";
+
+tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
+    ['Header 1', 'Header 2']
+  ],
+  bodyData: [
+    ['Text 1a', 'Text 2a'],
+    ['Text 1b', 'Text 2b'],
+  ]
+});
+
+tableOptions = {
+  ...new TableOptions(),
+  hoverColumnVisible: false,
+  defaultRowHeights: {
+  header: 40,
+  body: 34,
+  footer: 0
+}
+
+```
+
+There are numerous possibilities to create table models.
+Please refer to the [Documentation](https://gui.expert/doc) for further information or the [Demo](https://gui.expert/demos) section for examples.
