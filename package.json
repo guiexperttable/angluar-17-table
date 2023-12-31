@@ -2,6 +2,7 @@
   "name": "@guiexpert/angular-table",
   "version": "17.0.2",
   "scripts": {
+    "inst": "pnpm install -f",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
