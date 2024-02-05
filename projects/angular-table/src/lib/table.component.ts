@@ -115,7 +115,11 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
         debounceTime(this.debounceMouseClickDelay),
         takeWhile(() => this.alive)
       )
-      .subscribe((value) => this.mouseClicked.next(value));
+      .subscribe((value) => {
+        this.zone.run(() => {
+          this.mouseClicked.next(value);
+        });
+      });
   }
 
   ngOnDestroy(): void {
