@@ -60,7 +60,6 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   @Output()
   modelChanged: Subject<GeModelChangeEvent> = new Subject<GeModelChangeEvent>();
 
-
   @Output()
   selectionChanged: Subject<SelectionModelIf> = new Subject<SelectionModelIf>();
 
