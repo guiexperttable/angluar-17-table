@@ -13,15 +13,15 @@ import {
 import { CommonModule } from "@angular/common";
 import { debounceTime, Subject, takeWhile } from "rxjs";
 import {
-  EventListenerIf,
+  EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent,
+  GeMouseEvent, SelectionModelIf,
   TableApi,
   TableModelIf,
   TableOptions,
   TableOptionsIf,
   TableScope
-} from "@guiexpert/table";
+} from '@guiexpert/table';
 import { DomService } from "./service/dom-service";
 
 
@@ -60,6 +60,13 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   @Output()
   modelChanged: Subject<GeModelChangeEvent> = new Subject<GeModelChangeEvent>();
 
+
+  @Output()
+  selectionChanged: Subject<SelectionModelIf> = new Subject<SelectionModelIf>();
+
+  @Output()
+  focusChanged: Subject<FocusModelIf> = new Subject<FocusModelIf>();
+
   @Output()
   checkboxChanged: Subject<any[]> = new Subject<any[]>();
 
@@ -86,6 +93,13 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   ) {
   }
 
+  onSelectionChanged(model: SelectionModelIf): void {
+    this.selectionChanged.next(model);
+  }
+
+  onFocusChanged(model: FocusModelIf): void {
+    this.focusChanged.next(model);
+  }
 
   onContextmenu(evt: GeMouseEvent): void {
     this.contextmenu.next(evt);

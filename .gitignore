@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 /.npmrc
 /pnpm-lock.yaml
+/projects/angular-table/.npmrc
