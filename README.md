@@ -11,13 +11,14 @@ This is the UI-agnostic table component for your next web app. 😊
 ### Version compatibility
 
 
-| Angular   | @guiexpert/angular-table |
-|:----------|:-------------------------|
-| 18.x.x    | ^18.0.0                  |
-| 17.x.x    | ^17.0.0                  |
-| 16.x.x    | ^16.0.7                  |
-| 15.x.x    | ^15.0.2                  |
-| 14.x.x    | ^14.0.3                  |
+| Angular  | @guiexpert/angular-table |
+|:---------|:-------------------------|
+| 19.x.x   | ^19.0.0                  |
+| 18.x.x   | ^18.0.0                  |
+| 17.x.x   | ^17.0.0                  |
+| 16.x.x   | ^16.0.7                  |
+| 15.x.x   | ^15.0.2                  |
+| 14.x.x   | ^14.0.3                  |
 |
 
 
