@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/angular-table",
-  "version": "17.1.51",
+  "version": "17.1.52",
   "scripts": {
     "inst": "pnpm install -f",
     "ng": "ng",
@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "npm-update-table": "pnpm update @guiexpert/table",
-    "npm-pub": "npm publish"
+    "npm-pub": "npm publish --tag a17"
   },
   "private": false,
   "dependencies": {
