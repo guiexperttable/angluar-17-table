@@ -13,6 +13,10 @@ import {Subject, takeUntil} from "rxjs";
 import {Observable} from "rxjs/internal/Observable";
 
 
+function isObservable(value: any): value is Observable<any> {
+  return value instanceof Observable || value instanceof EventEmitter;
+}
+
 export class RendererWrapper<T extends ComponentRendererIf<T>>
   implements CellRendererIf {
 
@@ -50,24 +54,21 @@ export class RendererWrapper<T extends ComponentRendererIf<T>>
 
     const emmiterNames = Object.keys(componentRef.instance)
       .filter(key => {
-        // @ts-ignore
-        const t = componentRef.instance[key];
-        return t['subscribe']
+        const value = (componentRef.instance as any)[key];
+        return value && isObservable(value);
       });
 
-    // @ts-ignore
-    const observables: Observable[] = (emmiterNames.map(key => (componentRef.instance[key] as Observable)));
+    const observables: (Observable<any>|EventEmitter<any>)[] = (emmiterNames.map(key => ((componentRef.instance as any)[key] as Observable<any>)));
     observables.forEach(obs => obs
       .pipe(
         takeUntil(this.closed$)
       )
       .subscribe((event: any) => {
-        console.info('RendererWrapper event >', event); // TODO hmm?
         this.event$.next(event);
       })
     );
 
-    cellDiv.appendChild(componentRef.location.nativeElement);
+    if (cellDiv) cellDiv.appendChild(componentRef.location.nativeElement);
 
     this.appRef.attachView(componentRef.hostView);
 
