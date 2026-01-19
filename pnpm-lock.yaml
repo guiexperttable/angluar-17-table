@@ -33,8 +33,8 @@ importers:
         specifier: ^17.1.1
         version: 17.3.12(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser@17.3.12(@angular/animations@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)))(rxjs@7.8.2)
       '@guiexpert/table':
-        specifier: ^1.1.79
-        version: 1.1.79
+        specifier: ^1.1.80
+        version: 1.1.80
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -1141,8 +1141,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@guiexpert/table@1.1.79':
-    resolution: {integrity: sha512-+YVyPjY+VLfkeETg7yyocO8HvhzwYyDWfnmZ588rPKH1SivbS4o8FEAi7qaIx8+m2Mi4wg4OxZ9mW1CTZG7zqw==}
+  '@guiexpert/table@1.1.80':
+    resolution: {integrity: sha512-kwNip5riy2GiQv3VB1rZ/KvJuELdjTIwsvLgzh620b2N7rPJvNbASoeOdJzopOOimeWzaQ+bT2jUgbuSWJC5Dg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -5287,7 +5287,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@guiexpert/table@1.1.79':
+  '@guiexpert/table@1.1.80':
     dependencies:
       tslib: 2.8.1
 
