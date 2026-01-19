@@ -41,5 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 /.npmrc
-/pnpm-lock.yaml
+
 /projects/angular-table/.npmrc
