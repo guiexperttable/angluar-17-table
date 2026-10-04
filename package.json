@@ -1,6 +1,8 @@
 {
   "name": "@guiexpert/angular-table",
   "version": "17.1.84",
+  "license": "MIT",
+  "author": "Dr. Marc Kronberg <info@gui.expert> (https://gui.expert)",
   "scripts": {
     "inst": "pnpm install -f",
     "ng": "ng",

@@ -13,6 +13,7 @@ This is the UI-agnostic table component for your next web app. 😊
 
 | Angular   | @guiexpert/angular-table |
 |:----------|:-------------------------|
+| 22.x.x  | ^22.0.0                  |
 | 21.x.x  | ^21.0.0                  |
 | 20.x.x  | ^20.0.0                  |
 | 19.x.x  | ^19.0.0                  |
